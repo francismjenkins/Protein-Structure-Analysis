@@ -1,0 +1,88 @@
+<html>
+
+ <head><title>TM-align Server</title></head>
+
+
+ <script type="text/javascript" src="../../jmol/JSmol.min.js"></script>
+ <script type="text/javascript" src="../../jmol/Jmol2.js"></script>
+
+ <body bgcolor=#e0e0f8><h2>TM-align Results</h2>
+
+<ul>
+ <pre>
+ 
+ **************************************************************************
+ *                        TM-align (Version 20170708)                     *
+ * An algorithm for protein structure alignment and comparison            *
+ * Based on statistics:                                                   *
+ *       0.0 < TM-score < 0.30, random structural similarity              *
+ *       0.5 < TM-score < 1.00, in about the same fold                    *
+ * Reference: Y Zhang and J Skolnick, Nucl Acids Res 33, 2302-9 (2005)    *
+ * Please email your comments and suggestions to: zhng@umich.edu          *
+ **************************************************************************
+
+Name of Chain_1: A29671                                            
+Name of Chain_2: B29671                                            
+Length of Chain_1:  170 residues
+Length of Chain_2:  102 residues
+
+Aligned length=   65, RMSD=   5.10, Seq_ID=n_identical/n_aligned= 0.108
+TM-score= 0.21837 (if normalized by length of Chain_1)
+TM-score= 0.29680 (if normalized by length of Chain_2)
+(You should use TM-score normalized by length of the reference protein)
+
+(":" denotes aligned residue pairs of d < 5.0 A, "." denotes other aligned residues)
+ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSF--KESLLGFSKTIQTIDGRTLP-LSRVQPVQPSQTSTYPGQGMPTPKN--PSQ---RGNLIVKYKVDYPISLNDA----------------------QKRAID-------
+                                           .:                                        :::::::::..   ...   . ..::::: .... ....:.::: .:::: ::. :....  .     ::::::::::::.                            .            
+-------------------------------------------QG----------------------------------------GPWTPAADWRD-AGTHL---D-LLLDVPG-VDAGTLALAEDGGQ-LTVSG-ERP-GTEHLLRS--ERPSGRFVRELAFPEP------VRPASGVASLAGGVLTVRFEKLR-----PTIDVTA
+
+
+ </pre>
+</ul>
+
+<body bgcolor=#e0e0f8><h2>Visualization (Protein-1 in blue and Protein-2 in red)</h2>
+<ul>
+<table>
+<td>
+<b>Superposition of two proteins</b><br>
+<script type="text/javascript">jmolInitialize("../../jmol/");
+jmolSetAppletColor("#000000"); jmolApplet(500, "load ./F29671.pdb; calculate structure rama; select all; cartoons; spacefill off; wireframe off; backbone off; select :A; color blue; select :B; color red; "); </script>
+</td>
+<td>
+<b>Superposition of two proteins with ligands and solvents (when available)</b><br>
+<script type="text/javascript">jmolInitialize("../../jmol/");
+jmolSetAppletColor("#000000"); jmolApplet(500, "load ./G29671.pdb; calculate structure rama; select all; cartoon only; select :A; color blue; select :B; color red; select ligand; wireframe 0.25l; select solvent; spacefill 0.25; "); </script>
+</td>
+</table>
+</ul>
+
+<body bgcolor=#e0e0f8><h2>Document downloads</h2>
+<ul>
+<li>Click <a href=A29671.pdb>A29671.pdb</a> to download the first structure (1c3g.pdb) that you submitted.
+<li>Click <a href=B29671.pdb>B29671.pdb</a> to download the second structure (4fei.pdb) that you submitted.
+<li>Click <a href=C29671.pdb>C29671.pdb</a> to download a Rasmol script file to 
+      show the superposed Ca-traces in the aligned regions 
+      (To view the structure superposition, please run 'rasmol -script C29671').
+<li>Click <a href=D29671.pdb>D29671.pdb</a> to download a Rasmol script file to 
+      show the superposed Ca-traces of entire chain 
+      (To view the structure superposition, please run 'rasmol -script D29671').
+<li>Click <a href=E29671.pdb>E29671.pdb</a> to download a Rasmol script file to 
+      show the superposed full-atom structure in the aligned region 
+     (To view the structure superposition, please run 'rasmol -script E29671').
+<li>Click <a href=F29671.pdb>F29671.pdb</a> to download a Rasmol script file to 
+      show the superposed full-atom structure of the entire chain 
+      (To view the structure superposition, please run 'rasmol -script F29671').
+<li>Click <a href=G29671.pdb>G29671.pdb</a> to download a Rasmol script file to 
+      show the superposed full-atom structure of the entire chain with ligands/solvents
+      (To view the structure superposition, please run 'rasmol -script G29671').
+<p>All above files will be removed from the server after one month.
+</ul>
+<body bgcolor=#e0e0f8><h2>Reference:</h2>
+<ul>
+Y. Zhang, J. Skolnick, TM-align: A protein structure alignment algorithm based on TM-score, 
+Nucleic Acids Research, 2005 33: 2302-2309.<p>
+</ul>
+
+<a href=http://zhanglab.ccmb.med.umich.edu/TM-align/>Back to TM-align Homepage</a>
+<p>
+
